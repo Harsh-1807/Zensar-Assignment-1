@@ -1,1 +1,42 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Drawing Canvas with WebGL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar">
+            <h1>Sketch Glass</h1>
+            <div class="tool-group">
+                <input type="color" id="colorPicker" value="#000000" title="Color">
+                <label for="lineWidth">Brush Size:</label>
+                <input type="range" id="lineWidth" min="1" max="50" value="5">
+                <span id="lineWidthValue">5</span>
+                
+                <!-- New Mode Selector -->
+                <label for="modeSelector">Draw Mode:</label>
+                <select id="modeSelector">
+                    <option value="points">Points</option>
+                    <option value="lines">Lines</option>
+                    <option value="rectangles">Rectangles</option>
+                    <option value="circles">Circles</option>
+                </select>
+                
+            </div>
+            <button id="clearCanvas">Clear Canvas</button>
+            <button id="undo">Undo</button>
+            <button id="saveCanvas">Save Canvas</button>
+        </aside>
+        
+        <main id="main-content">
+            <canvas id="glCanvas"></canvas>
+        </main>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
