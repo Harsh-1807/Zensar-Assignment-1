@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Recipe Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Virtual Recipe Book</h1>
+        <input type="text" id="searchInput" placeholder="Search for recipes...">
+        <button id="addRecipeBtn">Add Recipe</button>
+        <div id="recipeList" class="recipe-list"></div>
+    </div>
 
+    <!-- Add Recipe Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Recipe</h2>
+            <input type="text" id="recipeTitle" placeholder="Recipe Title" required>
+            <input type="file" id="recipeImage" accept="image/*">
+            <textarea id="ingredients" placeholder="Ingredients (comma separated)" required></textarea>
+            <textarea id="instructions" placeholder="Instructions" required></textarea>
+            <button id="saveRecipeBtn">Save Recipe</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
